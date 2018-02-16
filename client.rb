@@ -17,9 +17,7 @@ end
 
 t = TCPSocket.new('185.111.219.128', 8888)
 a_string = t.gets.chomp
-p a_string
 for i in 1..26 do
-  p i
   str = decrypt(a_string, i).join
   if check_contain(str)
     t.puts(str)

@@ -1,2 +1,33 @@
-pk_2_passwd:
-  win_10: ZXhpPwWhFKw=
+pk_2_work:
+  win_xp:
+    user:
+      login: bob
+      pass: ZXhpPwWhFKw=
+    labs:
+      file: pk_2.rtf
+      passphrase: you have successfully completed part of the work
+  win_10:
+    user:
+      login: bob
+      pass: ZXhpPwWhFKw=
+    labs:
+      file: pk_2.rtf
+      passphrase: you have successfully completed part of the work
+    bitlocker:
+      passphrase: 9YDURBsiwW4oDomj
+  lin_ubuntu: 1
+      user:
+        login: bob
+        pass: GyzkLuGtX4g=
+      labs:
+        file: pk_2.txt
+        passphrase: good_job
+      lyks:
+        passphrase: Cjy0MwnqNWFMYsV8
+  lin_console:
+      user:
+        login: bob
+        pass: v5NHbMY5MtM=
+      labs:
+        file: pk_2.txt
+        passphrase: good job

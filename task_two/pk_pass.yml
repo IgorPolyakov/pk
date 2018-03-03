@@ -6,6 +6,7 @@ pk_2_work:
     labs:
       file: pk_2.rtf
       passphrase: you have successfully completed part of the work
+      pk_2_xp.ova: 0f7aaac5dad44dc518395cfea6813908
   win_10:
     user:
       login: bob
@@ -13,6 +14,7 @@ pk_2_work:
     labs:
       file: pk_2.rtf
       passphrase: you have successfully completed part of the work
+      pk_2_10.ova: f29de1d9184712235f863c34de9e4030
     bitlocker:
       passphrase: 9YDURBsiwW4oDomj
   lin_ubuntu: 1
@@ -22,6 +24,7 @@ pk_2_work:
       labs:
         file: pk_2.txt
         passphrase: good_job
+        pk_2_ubuntu_desktop.ova: 0633faefd8e049df8ea9da6d0acc21ba  
       lyks:
         passphrase: Cjy0MwnqNWFMYsV8
   lin_console:
@@ -31,3 +34,4 @@ pk_2_work:
       labs:
         file: pk_2.txt
         passphrase: good job
+        pk_ubuntu_console.ova: 15761b4b0548ef42c3210959d5f894f0

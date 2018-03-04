@@ -17,6 +17,9 @@ pk_2_work:
       pk_2_10.ova: f29de1d9184712235f863c34de9e4030
     bitlocker:
       passphrase: 9YDURBsiwW4oDomj
+      key_recovery: 631631-671099-630993-547591-143550-004422-580833-689700
+      id: A901AEC2-8833-40E7-9B6A-FAA0AFE97083
+ 
   lin_ubuntu: 1
       user:
         login: bob

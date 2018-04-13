@@ -5,13 +5,13 @@ class Task
   include Mongoid::Document
   after_create :set_value
   field :description, type: String
-  field :encode, type: String
+  field :decode, type: String
   field :status, type: Boolean
   field :digest, type: String
   field :digest_type, type: String
 
   def check_answer
-    var = eval "Digest::#{digest_type}.hexdigest encode.to_s"
+    var = eval "Digest::#{digest_type}.hexdigest decode.to_s"
     if var == digest
       self.status = true
       save

@@ -50,7 +50,7 @@ module Api
 
     # Only allow a trusted parameter "white list" through.
     def task_params
-      params.require(:task).permit(:encode)
+      params.require(:task).permit(:decode)
     end
 
     def json_list(var)

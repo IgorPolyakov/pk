@@ -40,7 +40,7 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -
 
 * Отправить решение задачи
 ```
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -H 'Authorization: #{TOKEN}' -X PATCH -d ' {"task":{"encode":"YOUR_ANSWER"}}' http://185.40.31.149:3000/api/tasks/#{relative_reference}
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -H 'Authorization: #{TOKEN}' -X PATCH -d ' {"task":{"decode":"YOUR_ANSWER"}}' http://185.40.31.149:3000/api/tasks/#{relative_reference}
 ```
 
 ## Структура отчета:

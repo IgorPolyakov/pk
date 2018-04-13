@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :tasks
     resources :auth, only: :create
   end
+  root 'api/tasks#index'
 end

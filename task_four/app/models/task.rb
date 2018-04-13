@@ -15,9 +15,9 @@ class Task
     if var == digest
       self.status = true
       save
-      { "status": 'krasauchek' }
+      { "status": 'good_job' }
     else
-      { "status": 'noup' }
+      { "status": 'wrong' }
     end
   end
 

@@ -1,9 +1,4 @@
----
-layout: post
-title:  "Практика №3 HyperText Transfer Protocol Secure"
-date:   2018-03-20 10:10:00 +0700
-categories: task
----
+# Практика №3 HyperText Transfer Protocol Secure
 
 Поднять информационный ресурс, при работе с которым используется только безопасное соединение (HTTPS). В качестве входных данных используется index.html
 

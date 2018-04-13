@@ -11,8 +11,14 @@
 Нужна регистрация пользователя. Формат логина: `НомерГруппы_ФамилияИмяОтчество` пример `777_abc`. Буквы в нижнем регистре, на сервере будет присутствовать валидация. Пароль произвольный.
 
 ## Задача
+Написать программу которая:
 
-Получить задачу от сервера, решить ее и отправить серверу. В ответ вы получите сообщение о выполнении `Практической работы №4`.
+* получит задачу от сервера;
+* задача заключается в обращении криптографической хеш-функций;
+* вам дан - дайджест, тип функции меняется от запроса к запросу, тип вам не известен;
+* получить исходное сообщение;
+* отправить его серверу;
+* получить в ответ `good_job`.
 
 Далее подготовить отчет по проделанной работе.
 
@@ -28,9 +34,14 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -
 curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -d '{"login": "530_piy", "password":"lol" }' http://185.40.31.149:3000/api/auth
 ```
 
-* Получить все задания
+* Посмотреть все задания
 ```
 curl -v -H "Accept: application/json" -H "Content-type: application/json" http://185.40.31.149:3000/api/tasks
+```
+
+* Получить задание
+```
+curl -v -H "Accept: application/json" -H "Content-type: application/json" http://185.40.31.149:3000/api/tasks/#{task_id}
 ```
 
 * Создать задачу
@@ -40,7 +51,11 @@ curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -
 
 * Отправить решение задачи
 ```
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -H 'Authorization: #{TOKEN}' -X PATCH -d ' {"task":{"decode":"YOUR_ANSWER"}}' http://185.40.31.149:3000/api/tasks/#{relative_reference}
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -H 'Authorization: #{TOKEN}' -X PATCH -d ' {"task":{"decode":"YOUR_ANSWER"}}' http://185.40.31.149:3000/api/tasks/#{task_id}
+```
+* Посмотреть кто зарегистрировался
+```
+firefox http://185.40.31.149:3000/api/users
 ```
 
 ## Структура отчета:

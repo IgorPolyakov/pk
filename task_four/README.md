@@ -25,36 +25,36 @@
 
 * Зарегистрировать пользователя
 ```
-curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -d '{"user": {"login": "530_kiv", "password":"kek" }}' http://185.40.31.149:3000/api/users
+curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -d '{"user": {"login": "530_kiv", "password":"kek" }}' http://185.40.31.149:8888/api/users
 ```
 
 * Получить токен
 ```
-curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -d '{"login": "530_piy", "password":"lol" }' http://185.40.31.149:3000/api/auth
+curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -d '{"login": "530_piy", "password":"lol" }' http://185.40.31.149:8888/api/auth
 ```
 
 * Посмотреть все задания
 ```
-curl -v -H "Accept: application/json" -H "Content-type: application/json" http://185.40.31.149:3000/api/tasks
+curl -v -H "Accept: application/json" -H "Content-type: application/json" http://185.40.31.149:8888/api/tasks
 ```
 
 * Получить задание
 ```
-curl -v -H "Accept: application/json" -H "Content-type: application/json" http://185.40.31.149:3000/api/tasks/#{task_id}
+curl -v -H "Accept: application/json" -H "Content-type: application/json" http://185.40.31.149:8888/api/tasks/#{task_id}
 ```
 
 * Создать задачу
 ```
-curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -d '' http://185.40.31.149:3000/api/tasks
+curl -v -H "Accept: application/json" -H "Content-type: application/json" POST -d '' http://185.40.31.149:8888/api/tasks
 ```
 
 * Отправить решение задачи
 ```
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -H 'Authorization: #{TOKEN}' -X PATCH -d ' {"task":{"decode":"YOUR_ANSWER"}}' http://185.40.31.149:3000/api/tasks/#{task_id}
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -H 'Authorization: #{TOKEN}' -X PATCH -d ' {"task":{"decode":"YOUR_ANSWER"}}' http://185.40.31.149:8888/api/tasks/#{task_id}
 ```
 * Посмотреть кто зарегистрировался
 ```
-firefox http://185.40.31.149:3000/api/users
+firefox http://185.40.31.149:8888/api/users
 ```
 
 ## Структура отчета:

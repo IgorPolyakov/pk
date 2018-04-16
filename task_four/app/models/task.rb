@@ -3,7 +3,7 @@
 require 'digest'
 class Task
   include Mongoid::Document
-  after_create :set_value
+  before_create :set_value
   field :description, type: String
   field :decode, type: String
   field :status, type: Boolean

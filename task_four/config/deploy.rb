@@ -11,7 +11,7 @@ require 'mina/rbenv' # for rbenv support. (https://rbenv.org)
 
 set :application_name, 'pk'
 set :domain, '185.40.31.149'
-set :deploy_to, '/home/user'
+set :deploy_to, '/home/user/pk'
 set :repository, 'git@github.com:IgorPolyakov/pk.git'
 set :branch, 'master'
 
@@ -25,6 +25,7 @@ set :forward_agent, true # SSH forward_agent.
 # run `mina -d` to see all folders and files already included in `shared_dirs` and `shared_files`
 # set :shared_dirs, fetch(:shared_dirs, []).push('public/assets')
 # set :shared_files, fetch(:shared_files, []).push('config/database.yml', 'config/secrets.yml')
+set :shared_files, fetch(:shared_files, []).push('config/master.key')
 
 # This task is the environment that is loaded for all remote run commands, such as
 # `mina deploy` or `mina rake`.
@@ -41,6 +42,7 @@ end
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
 task :setup do
   command %(rbenv install 2.5.1 --skip-existing)
+  command %(touch "#{fetch(:shared_path)}/config/master.key")
 end
 
 desc 'Deploys the current version to the server.'

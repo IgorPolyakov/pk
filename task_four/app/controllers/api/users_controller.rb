@@ -36,14 +36,22 @@ module Api
 
     # DELETE /users/1
     def destroy
-      @user.destroy
+      if @current_user.id == @user.id
+        @user.destroy
+      else
+        render json: { message: 'You can not delete other users' }, status: :forbidden
+      end
     end
 
     private
 
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      if User.where(id: params[:id]).exists?
+        @user = User.find(params[:id])
+      else
+        render json: { message: 'User not found' }, status: :not_found
+      end
     end
 
     # Only allow a trusted parameter "white list" through.

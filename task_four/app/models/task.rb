@@ -30,6 +30,6 @@ class Task
   end
 
   def get_rand_digest_type
-    %w[MD5 RMD160 SHA1 SHA2 SHA512 SHA384 SHA256].sample
+    %w[MD5 RMD160 SHA1 SHA512 SHA384 SHA256].sample
   end
 end

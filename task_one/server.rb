@@ -7,7 +7,7 @@ def caesar_cipher(string, shift = 1)
   string.chars.map { |c| encrypter.fetch(c, ' ') }
 end
 
-server = TCPServer.new 8888
+server = TCPServer.new 7777
 loop do
   Thread.start(server.accept) do |client|
     phrase = FFaker::Lorem.phrase.downcase.chomp('.')

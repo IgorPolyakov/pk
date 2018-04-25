@@ -1,13 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ffaker (2.8.1)
+    ffaker (2.9.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   ffaker
+
+RUBY VERSION
+   ruby 2.5.1p57
 
 BUNDLED WITH
    1.16.1

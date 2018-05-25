@@ -2,6 +2,7 @@
 
 class User
   include Mongoid::Document
+  include Mongoid::Timestamps
   include ActiveModel::SecurePassword
   has_secure_password
   validates :login, uniqueness: true

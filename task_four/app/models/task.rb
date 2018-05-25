@@ -3,6 +3,7 @@
 require 'digest'
 class Task
   include Mongoid::Document
+  include Mongoid::Timestamps
   before_create :set_value
   field :description, type: String
   field :decode, type: String

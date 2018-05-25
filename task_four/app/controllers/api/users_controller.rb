@@ -60,7 +60,7 @@ module Api
     end
 
     def json_list(var)
-      { users: var.as_json(only: %i[login _id]) }
+      { users: var.as_json(only: %i[login _id created_at]) }
     end
   end
 end

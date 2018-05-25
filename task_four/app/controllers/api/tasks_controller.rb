@@ -54,7 +54,7 @@ module Api
     end
 
     def json_list(var)
-      { tasks: var.as_json(only: %i[digest _id status]) }
+      { tasks: var.as_json(only: %i[digest _id status created_at]) }
     end
   end
 end
